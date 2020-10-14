@@ -52,11 +52,9 @@ for a in list(alignments):
 					if ck in alignments[al]:
 						del alignments[al][ck]
 	alignments[a]=check
-	#write_fasta(a, check)
 alignments['repeats.fas']=repeats
 print(len(repeats), 'common sequences found in the alignments.')
 if not len(repeats):
 	sys.exit()
 for a in alignments.keys():
 	write_fasta(a, alignments[a])
-#write_fasta('repeats.fas', repeats)
